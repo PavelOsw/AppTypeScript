@@ -3,7 +3,7 @@
 */
 
 
-interface Producto {
+export interface Producto {
     desc: string;
     precio: number;
 }
@@ -18,7 +18,7 @@ const tablet: Producto = {
     precio: 349
 }
 
-function calculaIVA( productos: Producto[]): [number, number] {
+export function calculaIVA( productos: Producto[]): [number, number] {
     
     let total = 0;
 
@@ -29,9 +29,9 @@ function calculaIVA( productos: Producto[]): [number, number] {
     return [total, total * 0.16];
 }
 
-const articulos = [telefono, tablet];
+//const articulos = [telefono, tablet];
 
-const [ total, iva ] = calculaIVA( articulos );
+//const [ total, iva ] = calculaIVA( articulos );
 
-console.log('Total: ', total);
-console.log('IVA:', iva);
+//console.log('Total: ', total);
+//console.log('IVA:', iva);
